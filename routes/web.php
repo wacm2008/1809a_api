@@ -13,7 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('checklogintoken');
+
+
 Route::get('/api/user','ApiController@userapi');
 //curl get post
 Route::get('/api/test','ApiController@test');
