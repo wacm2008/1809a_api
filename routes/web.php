@@ -28,3 +28,5 @@ Route::post('/api/reg','ApiController@register');
 Route::post('/api/login','ApiController@login');
 //个人中心
 Route::get('/api/myuser','ApiController@myuser')->middleware(['checklogin','request10times']);
+//资源控制器
+Route::resource('/goods',GoodsController::class);
